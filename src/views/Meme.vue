@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="imageList" v-for="(item,index) in imgUrl" :key="index">
-      <img :src=item>
+      <img :src=item loading="lazy">
     </div>
   </div>
 </template>

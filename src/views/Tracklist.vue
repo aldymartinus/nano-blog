@@ -4,7 +4,7 @@
       <p>👈 Swipe to the left</p>
     </div>
     <div v-for="(track,index) in tracklistArr" :key="index">
-      <iframe :src="track"></iframe>
+      <iframe :src="track" allowtransparency="true" loading="lazy" referrerpolicy="Origin-when-cross-origin"></iframe>
     </div>
   </div>
 </template>
@@ -40,7 +40,7 @@ export default {
     scroll-snap-align: start;
     border: none;
     width: 100%;
-    height: 70vh;
+    height: 69vh;
   }
   .swipe{
     scroll-snap-align: start;
@@ -60,12 +60,18 @@ export default {
     -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
   }
   @media screen and (max-width:800) {
-    .container{
+  .container{
     scroll-snap-type: x mandatory;
     display: grid;
     scrollbar-width: 0;
     grid-template-columns: repeat(99,100%);
     overflow: auto;
   }
+}
+
+  @media screen and (max-width:360px) {
+    .container iframe{
+    height: 59.3vh;
   }
+}
 </style>

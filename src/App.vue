@@ -46,7 +46,7 @@
 .content{
     border-radius: 5px;
     margin: 0.5rem 0;
-    height: 70vh;
+    height: 69vh;
     border: 1px solid #eee;
     box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302),0 2px 6px 2px rgba(60,64,67,0.149);
 }
@@ -84,6 +84,19 @@
         width: 30%;
         height: 100%;
         margin: 0 auto;
+    }
+    .nav{
+        margin-top: 0.8rem;
+        height:10vh;
+    }
+    .content{
+        height: 70vh;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .content{
+        height: 59vh;
     }
     .nav{
         margin-top: 0.8rem;
